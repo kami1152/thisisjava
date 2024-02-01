@@ -10,8 +10,10 @@ public class CastingExample {
 		//vehicle.checkFare(); (x)
 
 		//강제 타입 변환후 호출
-		Bus bus = (Bus) vehicle; 
-		bus.run();
-		bus.checkFare();
+		if (vehicle instanceof Bus bus) {
+//			Bus bus = (Bus) vehicle; 
+			bus.run();
+			bus.checkFare();
+		}
 	}
 }

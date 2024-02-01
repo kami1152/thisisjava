@@ -9,11 +9,11 @@ public class AbstractMethodExample {
 		cat.sound();
 
 		//매개변수의 다형성
-		animalSound(new Dog());
-		animalSound(new Cat());
+		동물이운다(new Dog());
+		동물이운다(new Cat());
 	}
 
-	public static void animalSound( Animal animal ) {
-		animal.sound();
+	public static void 동물이운다( Animal 동물 ) {
+		동물.sound();
 	}
 }

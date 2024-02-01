@@ -16,6 +16,8 @@ public class Button {
 	}
 
 	public void click() {
-		this.clickListener.onClick();
+		if (clickListener != null) {
+			this.clickListener.onClick();
+		}
 	}
 }

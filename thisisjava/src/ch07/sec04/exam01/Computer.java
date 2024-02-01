@@ -9,7 +9,7 @@ public class Computer extends Calculator {
 	}
 	
 	public void foo() {
-		areaCircle(10);
+		this.areaCircle(10);
 	}
 	
 }

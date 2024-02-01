@@ -17,6 +17,7 @@ public interface RemoteControl {
 
 	//정적 메소드
 	static void changeBattery() {
+		System.out.println(MAX_VOLUME);
 		System.out.println("리모콘 건전지를 교환합니다.");
 	}
 }

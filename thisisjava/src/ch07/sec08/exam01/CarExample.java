@@ -6,10 +6,10 @@ public class CarExample {
 		Car myCar = new Car();
 
 		//Tire 객체 장착
-		myCar.tire = new Tire();
-		myCar.run();
+//		myCar.tire = new Tire();
+//		myCar.run();
 
-		//HankookTire 객체 장착
+//		//HankookTire 객체 장착
 		myCar.tire = new HankookTire();
 		myCar.run();
 

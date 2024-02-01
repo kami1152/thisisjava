@@ -2,9 +2,9 @@ package ch09.sec04.exam03;
 
 public class A {
 	//메소드
-	public void method1(int arg) { 					//final int arg
+	public void method1(final int arg) { 		//final int arg
 		//로컬 변수 
-		int var = 1; 						 		//final int var = 1;
+		final int var = 1; 						//final int var = 1;
 		
 		//로컬 클래스
 		class B {
@@ -15,8 +15,8 @@ public class A {
 				System.out.println("var: " + var);		//(o)
 				
 				//로컬 변수 수정
-				//arg = 2;									      //(x)
-				//var = 2;									      //(x)
+				//arg = 2;	//(x)
+				//var = 2;	//(x)
 			}
 		}
 		
@@ -26,7 +26,7 @@ public class A {
 		b.method2();
 		
 		//로컬 변수 수정
-		//arg = 3;											      //(x)
-		//var = 3;											      //(x)
+		//arg = 3;//(x)
+		//var = 3;//(x)
 	}
 }

@@ -7,10 +7,12 @@ public class DriverExample {
 
 		//매개값으로 Bus 객체를 제공하고 driver() 메소드 호출
 		Bus bus = new Bus();
-		driver.drive(bus);
+		driver.drive(bus); //Vehicle vehicle = bus; 
+		driver.drive(new Bus()); //Vehicle vehicle = bus; 
 
 		//매개값으로 Taxi 객체를 제공하고 driver() 메소드 호출
 		Taxi taxi = new Taxi();
-		driver.drive(taxi);
+		driver.drive(taxi);//Vehicle vehicle = bus;
+		driver.drive(new Taxi());//Vehicle vehicle = bus;
 	}
 }

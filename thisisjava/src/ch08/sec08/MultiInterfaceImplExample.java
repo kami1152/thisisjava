@@ -6,10 +6,20 @@ public class MultiInterfaceImplExample {
 		RemoteControl rc = new SmartTelevision();
 		//RemoteControl 인터페이스에 선언된 추상 메소드만 호출 가능
 		rc.turnOn();
-		rc.turnOff();		
+		rc.turnOff();
+		
+		if (rc instanceof Searchable) {
+			Searchable searchable = (Searchable)rc;
+			searchable.search("https://www.youtube.com");
+		}
+		
+		if (rc instanceof Searchable searchable) {
+			searchable.search("https://www.youtube.com");
+		}
+
 		//Searchable 인터페이스 변수 선언 및 구현 객체 대입
-		Searchable searchable = new SmartTelevision();
+		Searchable searchable2 = new SmartTelevision();
 		//Searchable 인터페이스에 선언된 추상 메소드만 호출 가능
-		searchable.search("https://www.youtube.com");
+		searchable2.search("https://www.youtube.com");
 	}
 }
