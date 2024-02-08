@@ -8,5 +8,6 @@ public class PrintTimeZoneID {
 		for(String id : availableIDs) {
 			System.out.println(id);
 		}
+		//(010|011|070|016|018)-[0-9]{3,4}
 	}
 }
