@@ -9,7 +9,32 @@ public class AccountExample {
 
 		//출금하기
 		try {
-			account.withdraw(30000);
+			account.withdraw(5000);
+			System.out.println("잔고: " + account.getBalance());
+			account.withdraw(5000);
+			System.out.println("잔고: " + account.getBalance());
+			account.withdraw(5000);
+			System.out.println("잔고: " + account.getBalance());
+
+			
+//			if (account.withdraw(5000)) {
+//				System.out.println("잔고: " + account.getBalance());
+//			} else {
+//				System.out.println("잔고가 부족합니다");
+//			}
+//			
+//			if (account.withdraw(5000)) {
+//				System.out.println("잔고: " + account.getBalance());
+//			} else {
+//				System.out.println("잔고가 부족합니다");
+//			}
+//			
+//			if (account.withdraw(5000)) {
+//				System.out.println("잔고: " + account.getBalance());
+//			} else {
+//				System.out.println("잔고가 부족합니다");
+//			}
+			
 		} catch(InsufficientException e) {
 			String message = e.getMessage();
 			System.out.println(message);

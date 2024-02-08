@@ -1,5 +1,6 @@
 package ch12.sec08;
 
+import java.text.SimpleDateFormat;
 import java.util.*;
 
 public class CalendarExample {
@@ -42,5 +43,14 @@ public class CalendarExample {
 		System.out.print(hour + "시 ");
 		System.out.print(minute + "분 ");
 		System.out.println(second + "초 ");
+		
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy.MM.dd HH:mm:ss");
+		String strNow2 = sdf.format(now.getTime());
+		System.out.println(strNow2);
+		
+		SimpleDateFormat sdf1 = new SimpleDateFormat("yyyyMMddHHmmss");
+		System.out.println(sdf1.format(now.getTime()));
+		
+		
 	}
 }

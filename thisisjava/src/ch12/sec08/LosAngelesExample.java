@@ -1,10 +1,15 @@
 package ch12.sec08;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
+import java.util.Locale;
 import java.util.TimeZone;
 
 public class LosAngelesExample {
 	public static void main(String[] args) {
+		Date now1 = new Date();
+		
 		TimeZone timeZone = TimeZone.getTimeZone("America/Los_Angeles");
 		Calendar now = Calendar.getInstance( timeZone );
 
@@ -23,5 +28,11 @@ public class LosAngelesExample {
 		System.out.print(hour + "시 ");
 		System.out.print(minute + "분 ");
 		System.out.println(second + "초 ");
+		
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy.MM.dd HH:mm:ss", Locale.US);
+		String strNow2 = sdf.format(now.getTime());
+		System.out.println(strNow2);
+		System.out.println(now);
+
 	}
 }

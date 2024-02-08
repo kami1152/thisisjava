@@ -3,15 +3,24 @@ package ch12.sec08;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
+import java.util.Calendar;
 
 public class DateTimeCompareExample {
 	public static void main(String[] args) {
 		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy.MM.dd a HH:mm:ss");
+		
+		Calendar startDate = Calendar.getInstance();
+		startDate.set(Calendar.YEAR, 2021);
+		startDate.set(Calendar.MONTH, 0);
+		startDate.set(Calendar.DAY_OF_MONTH, 1);
+		startDate.set(Calendar.HOUR, 0);
+		startDate.set(Calendar.MINUTE, 0);
+		startDate.set(Calendar.SECOND, 0);
 
 		LocalDateTime startDateTime = LocalDateTime.of(2021, 1, 1, 0, 0, 0);
 		System.out.println("시작일: " + startDateTime.format(dtf));
 		
-		LocalDateTime endDateTime = LocalDateTime.of(2021, 12, 31, 0, 0, 0);
+		LocalDateTime endDateTime = LocalDateTime.of(2021, 1, 1, 0, 0, 0);
 		System.out.println("종료일: " + endDateTime.format(dtf));
  
 		if(startDateTime.isBefore(endDateTime)) {

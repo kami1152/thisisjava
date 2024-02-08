@@ -7,6 +7,7 @@ public class ThrowsExample1 {
 		} catch(ClassNotFoundException e) {
 			System.out.println("예외 처리: " + e.toString());
 		}
+		System.out.println("asdasdas");
 	}
 
 	public static void findClass() throws ClassNotFoundException {

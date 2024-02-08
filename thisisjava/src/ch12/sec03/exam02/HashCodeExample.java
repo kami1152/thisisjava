@@ -15,5 +15,10 @@ public class HashCodeExample {
 		} else {
 			System.out.println("해시코드가 다르므로 동등 객체가 아닙니다.");
 		}
+		
+		System.out.println(s1);
+		System.out.println(s2);
+		System.out.println(s1.toString());
+		System.out.println(s2.toString());
 	}
 }

@@ -5,9 +5,14 @@ import java.util.Random;
 
 public class RandomExample {
 	public static void main(String[] args) {
+//		int num = (int)(Math.random() * 6) + 1;
+//		System.out.println("num = " + num);
+		
+		System.out.println(System.currentTimeMillis());
+		System.out.println(System.nanoTime());
 		//선택번호
 		int[] selectNumber = new int[6];
-		Random random = new Random(3);
+		Random random = new Random();
 		System.out.print("선택번호: ");
 		for(int i=0; i<6; i++) {
 			selectNumber[i] = random.nextInt(45) + 1;
@@ -17,7 +22,7 @@ public class RandomExample {
 
 		//당첨번호
 		int[] winningNumber = new int[6];
-		random = new Random(5);
+		random = new Random();
 		System.out.print("당첨번호: ");
 		for(int i=0; i<6; i++) {
 			winningNumber[i] = random.nextInt(45) + 1;

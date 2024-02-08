@@ -1,30 +1,49 @@
 package ch12.sec03.exam02;
 
+import java.util.Objects;
+
 public class Student {
 	private int no;
 	private String name;
-
+	
+	
 	public Student(int no, String name) {
+		super();
 		this.no = no;
 		this.name = name;
 	}
-
-	public int getNo() { return no; }
-	public String getName() { return name; }
+	
+	public int getNo() {
+		return no;
+	}
+	public String getName() {
+		return name;
+	}
 
 	@Override
 	public int hashCode() {
-		int hashCode = no + name.hashCode();
-		return hashCode;
+		return Objects.hash(no);
 	}
 
 	@Override
 	public boolean equals(Object obj) {
-		if(obj instanceof Student target) {
-			if(no == target.getNo() && name.equals(target.getName())) {
-				return true;
-			}
-		}
-		return false;
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Student other = (Student) obj;
+		return no == other.no;
 	}
+
+	@Override
+	public String toString() {
+		return "Student [no=" + no + ", name=" + name + "]";
+	}
+
+//	public String toString() {
+//		return "no = " + no + "\tname=" + name;
+//	}
+	
 }

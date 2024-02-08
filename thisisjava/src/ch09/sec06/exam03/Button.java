@@ -15,6 +15,8 @@ public class Button {
 		this.clickListener = clickListener;
 	}
 
+	//click() 메소드가 호출되면 clickListener 참조 변수가 
+	// null아니면 onClick() 함수를 호출하여 처리한다 
 	public void click() {
 		if (clickListener != null) {
 			this.clickListener.onClick();

@@ -6,9 +6,13 @@ public class ExceptionHandlingExample2 {
 			int result = data.length();
 			System.out.println("문자 수: " + result);
 		} catch(NullPointerException e) {
-			System.out.println(e.getMessage()); //①
-			//System.out.println(e.toString()); //②
-			//e.printStackTrace(); //③
+			e.printStackTrace(); //③
+		} catch(RuntimeException e) {
+			e.printStackTrace(); //③
+//		} catch(ArrayIndexOutOfBoundsException e) {
+//			e.printStackTrace(); //③
+//		} catch(NumberFormatException e) {
+//			e.printStackTrace(); //③
 		} finally {
 			System.out.println("[마무리 실행]\n");
 		}

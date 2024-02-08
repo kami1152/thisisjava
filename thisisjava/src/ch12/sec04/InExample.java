@@ -1,18 +1,21 @@
 package ch12.sec04;
 
+import java.util.Scanner;
+
 public class InExample {
 	public static void main(String[] args) throws Exception {
 		int speed = 0;
 		int keyCode = 0;
-
+		Scanner scanner = new Scanner(System.in);
+		
 		while(true) {
 			//Enter 키를 읽지 않았을 경우에만 실행
-			if(keyCode != 13 && keyCode != 10) {
-				if (keyCode == 49) { 				//숫자 1 키를 읽었을 경우
+			if(keyCode != '\n' && keyCode != '\r') {
+				if (keyCode == 1) { 				//숫자 1 키를 읽었을 경우
 					speed++;
-				} else if (keyCode == 50) {			//숫자 2 키를 읽었을 경우
+				} else if (keyCode == 2) {			//숫자 2 키를 읽었을 경우
 					speed--;
-				} else if (keyCode == 51) { 		//숫자 3 키를 읽었을 경우
+				} else if (keyCode == 3) { 		//숫자 3 키를 읽었을 경우
 					break;
 				}
 				System.out.println("-----------------------------");
@@ -23,7 +26,7 @@ public class InExample {
 			}
 			
 			//키를 하나씩 읽음
-			keyCode = System.in.read();
+			keyCode = scanner.nextInt();
 		}
 		
 		System.out.println("프로그램 종료");

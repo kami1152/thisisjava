@@ -19,6 +19,7 @@ public class Korean {
 //	}
 	
 	String getSsn() {
+		ssn = "asdasdas";
 		return ssn;
 	}
 }

@@ -16,7 +16,7 @@ public class ButtonExample3 {
 			}
 		}
 		
-		ClickListener listner = new Button.ClickListener() {
+		Button.ClickListener listner = new Button.ClickListener() {
 			@Override
 			public void onClick() {
 				System.out.println("Ok 버튼을 클릭했습니다.");

@@ -3,7 +3,22 @@ package ch09.sec06.exam03;
 import ch09.sec06.exam03.Button.ClickListener;
 
 public class ButtonExample5 {
+	
+	String foo() {
+		return "aaa";
+	}
 	public static void main(String[] args) {
+
+		String s1 = "문자열";
+		String s2 = new String("문자열");
+		
+		if (s1.equals(s2)) {
+			System.out.println("두 문자열이 같음");
+		}
+		if (s1 == s2) {
+			System.out.println("두 문자열이 같음");
+		}
+
 		//Ok 버튼 객체 생성
 		Button btnOk = new Button();
 		btnOk.click();
