@@ -72,8 +72,20 @@ public class ArrayListExample {
 			}
 		}
 		Board board2 = new Board(3);
-		if (list.contains(board2)) {
-			int idx = list.indexOf(board2);
+//		if (list.contains(board2)) {
+//			int idx = list.indexOf(board2);
+//			if (idx != -1) {
+//				board2 = list.get(idx);
+//				System.out.println("찾은 자료 ==== ");
+//				System.out.println(board2);
+//			}
+//			System.out.println("아이디가 "+board2.getId()+" 인 자료의 위치 = " + idx); 
+//		} else {
+//			System.out.println(board2.getId() + " 찾고가 하는 아이디가 존재하지 않습니다");
+//		}
+		
+		if (list.contains(3)) {
+			int idx = list.indexOf(3);
 			if (idx != -1) {
 				board2 = list.get(idx);
 				System.out.println("찾은 자료 ==== ");
@@ -81,9 +93,8 @@ public class ArrayListExample {
 			}
 			System.out.println("아이디가 "+board2.getId()+" 인 자료의 위치 = " + idx); 
 		} else {
-			System.out.println(board2.getId() + " 찾고가 하는 아이디가 존재하지 않습니다");
+			System.out.println("3 찾고가 하는 아이디가 존재하지 않습니다");
 		}
-		
 		
 		//객체 삭제
 		list.remove(2);

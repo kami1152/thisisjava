@@ -18,7 +18,7 @@ public class LinkedListExample {
 
 		//ArrayList 컬렉션에 저장하는 시간 측정
 		startTime = System.nanoTime();
-		for(int i=0; i<10000; i++) {
+		for(int i=0; i<100000; i++) {
 			list1.add(0, String.valueOf(i));
 		}
 		endTime = System.nanoTime();
@@ -26,7 +26,7 @@ public class LinkedListExample {
 
 		//LinkedList 컬렉션에 저장하는 시간 측정
 		startTime = System.nanoTime();
-		for(int i=0; i<10000; i++) {
+		for(int i=0; i<100000; i++) {
 			list2.add(0, String.valueOf(i));
 		}
 		endTime = System.nanoTime();

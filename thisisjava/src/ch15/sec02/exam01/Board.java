@@ -64,12 +64,17 @@ public class Board {
 
 	@Override
 	public boolean equals(Object obj) {
+		System.out.println("equals() ..." + obj);
 		if (this == obj)
 			return true;
 		if (obj == null)
 			return false;
-		if (getClass() != obj.getClass())
+		if (getClass() != obj.getClass()) {
+			if (obj instanceof Integer id) {
+				return this.id == id;
+			}
 			return false;
+		}
 		Board other = (Board) obj;
 		return id == other.id;
 	}
