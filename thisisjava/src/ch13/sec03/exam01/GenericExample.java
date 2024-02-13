@@ -3,9 +3,10 @@ package ch13.sec03.exam01;
 public class GenericExample {
 	//제네릭 메소드
 	public static <T> Box<T> boxing(T t) {
-		Box<T> box = new Box<T>();
-		box.set(t);
-		return box;
+		return new Box<T>(t);
+//		Box<T> box = new Box<T>(t);
+//		box.set(t);
+//		return box;
 	}
 
 	public static void main(String[] args) {

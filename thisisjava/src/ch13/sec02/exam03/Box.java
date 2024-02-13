@@ -5,7 +5,8 @@ public class Box<T> {
 
 	//Box의 내용물이 같은지 비교
 	public boolean compare(Box<T> other) {
-		boolean result = content.equals(other.content);
-		return result;
+//		boolean result = content.equals(other.content);
+//		return result;
+		return content.equals(other.content);
 	}
 }

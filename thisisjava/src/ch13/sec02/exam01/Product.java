@@ -6,6 +6,12 @@ public class Product<K, M> {
 	private K kind;
 	private M model;
 	
+	public Product(K kind, M model) {
+		super();
+		this.kind = kind;
+		this.model = model;
+	}
+	
 	//메소드
 	public K getKind() { return this.kind; }
 	public M getModel() { return this.model; }

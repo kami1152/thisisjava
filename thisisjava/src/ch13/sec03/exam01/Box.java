@@ -4,6 +4,12 @@ public class Box<T> {
 	//필드
 	private T t;
 	
+	
+	public Box(T t) {
+		super();
+		this.t = t;
+	}
+
 	//Getter 메소드
 	public T get() {
 		return t;
