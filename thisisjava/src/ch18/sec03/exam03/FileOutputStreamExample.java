@@ -5,7 +5,7 @@ import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
 
-public class CopyExample {
+public class FileOutputStreamExample {
 	public static void main(String[] args) throws Exception {
 		String originalFileName = "C:/Temp/test.jpg";
 		String targetFileName = "C:/Temp/test2.jpg";
