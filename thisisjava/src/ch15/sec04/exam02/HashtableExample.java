@@ -1,12 +1,14 @@
 package ch15.sec04.exam02;
 
+import java.util.HashMap;
 import java.util.Hashtable;
 import java.util.Map;
 	
 public class HashtableExample {
 	public static void main(String[] args) {
 		//Hashtable 컬렉션 생성
-		Map<String, Integer> map = new Hashtable< >();
+//		Map<String, Integer> map = new Hashtable< >();
+		Map<String, Integer> map = new HashMap<>();
 		
 		//작업 스레드 객체 생성
 		Thread threadA = new Thread() {

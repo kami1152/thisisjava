@@ -1,13 +1,14 @@
 package ch15.sec04.exam01;
 
 import java.util.HashMap;
+import java.util.Hashtable;
 import java.util.Map;
 
 //DTO -> Map으로 대신하여 구현하는 방법 
 public class HashMapExam6 {
 
 	//id를 키로해서 Map 객체를 관리한다 
-	Map<String, Map<String, String>> array = new HashMap<String, Map<String,String>>();
+	Map<String, Map<String, String>> array = new Hashtable<String, Map<String,String>>();
 
 	public void addStudent(String id, String name, String phone) {
 		Map<String, String>  map = new HashMap<>();
@@ -37,7 +38,7 @@ public class HashMapExam6 {
 		}
 
 //		exam.output();
-		for (int i=0;i<10;i++) {
+		for (int i=0;i<100;i++) {
 			long tick = System.nanoTime();
 			var student = exam.array.get("9000");
 //			if (student != null) {

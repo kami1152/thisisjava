@@ -1,17 +1,41 @@
 package ch15.sec04.exam03;
 
+import java.io.FileInputStream;
 import java.util.Properties;
+import java.util.Scanner;
 	
 public class PropertiesExample {
 	public static void main(String[] args) throws Exception {
+//		Properties properties = new Properties();
+//		properties.load(new FileInputStream("C:\\Users\\KOSA\\git\\thisisjava\\thisisjava\\src\\ch15\\sec04\\exam03\\in.txt"));
+//
+//		for (var entry : properties.entrySet()) {
+//			System.out.println("key = " + entry.getKey());
+//			System.out.println("value = " + entry.getValue());
+//		}
+//		
+//		int a = Integer.parseInt(properties.getProperty("a"));//10;
+//		int b = Integer.parseInt(properties.getProperty("b"));//10;;//20;
+
+//		Scanner scanner = new Scanner(System.in);
+//		int a = scanner.nextInt();//10;
+//		int b = scanner.nextInt();//20;
+//		int sum = a + b;
+//		
+//		System.out.println(a + " + " + b + " = " + sum);
+	
+//		scanner.close();
+		
+		
 		//Properties 컬렉션 생성
 		Properties properties = new Properties();
 
 		//PropertiesExample.class와 동일한 ClassPath에 있는 database.properties 파일 로드
+		//properties.load(new FileInputStream("C:\\Users\\KOSA\\git\\thisisjava\\thisisjava\\src\\ch15\\sec04\\exam03\\database.properties"));
 		properties.load(PropertiesExample.class.getResourceAsStream("database.properties"));
 
 		//주어진 키에 대한 값 읽기
-		String driver = properties.getProperty("driver");
+		String driver = (String)properties.get("driver");
 		String url = properties.getProperty("url");
 		String username = properties.getProperty("username");
 		String password = properties.getProperty("password");

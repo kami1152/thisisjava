@@ -1,4 +1,4 @@
-package ch15.sec05.exam03;
+package ch15.sec05.exam03_0;
 
 public class Person implements Comparable<Person> {
 	public String name;
@@ -11,8 +11,10 @@ public class Person implements Comparable<Person> {
 
 	@Override
 	public int compareTo(Person o) {
-		if(age<o.age) return -1;
-		else if(age == o.age) return 0;
-		else return 1;
+		//오름 차순 
+		//return age - o.age;
+		//내림 차순 
+		return o.age - age;
+
 	}
 }
