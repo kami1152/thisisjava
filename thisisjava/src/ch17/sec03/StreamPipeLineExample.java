@@ -2,14 +2,16 @@ package ch17.sec03;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 public class StreamPipeLineExample {
 	public static void main(String[] args) {
-		List<Student> list = Arrays.asList(
-				new Student("홍길동", 10),
-				new Student("신용권", 20),
-				new Student("유미선", 30)
-				);
+//		List<Student> list = Arrays.asList(
+//				new Student("홍길동", 10),
+//				new Student("신용권", 20),
+//				new Student("유미선", 30)
+//				);
 
 		//방법1
 		/*
@@ -21,11 +23,21 @@ public class StreamPipeLineExample {
 		*/
 
 		//방법2
-		double avg = list.stream()
-				.mapToInt(student -> student.getScore())
-				.average()
-				.getAsDouble();
+//		double avg = list.stream()
+//				.mapToInt(student -> student.getScore())
+//				.average()
+//				.getAsDouble();
+//		
+//		System.out.println("평균 점수: " + avg);
 		
-		System.out.println("평균 점수: " + avg);
+//		int [] arr = {10,20,30,40,50,60};
+//		IntStream stream = Arrays.stream(arr);
+		
+		IntStream stream = Arrays.stream(new int [] {10,20,30,40,50,60});
+		stream.forEach(item -> System.out.println(item));
+		
+		stream = Arrays.stream(new int [] {10,20,30,40,50,60});
+		stream.forEach(item -> System.out.println(item));
+		
 	}
 }

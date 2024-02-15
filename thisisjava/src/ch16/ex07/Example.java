@@ -13,8 +13,8 @@ public class Example {
 	}
 	
 	public static void main(String[] args) {
-//		int max = maxOrMin((x, y) -> Math.max(x,  y));
-		int max = maxOrMin(Math::max);
+//		int max = maxOrMin(Math::max);
+		int max = maxOrMin((a, b) -> Math.max(a, b));
 		int min = maxOrMin(Math::min);
 		
 		System.out.println("max = " + max);
