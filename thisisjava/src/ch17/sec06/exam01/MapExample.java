@@ -11,9 +11,20 @@ public class MapExample {
 		studentList.add(new Student("홍길동", 92));
 		studentList.add(new Student("홍길동", 87));
 		
+		
+		for (var student : studentList) {
+			System.out.println(student.getScore());
+		}
+		System.out.println();
+		
 		//Student를 score 스트림으로 변환
 		studentList.stream()
 			.mapToInt(s -> s.getScore())
 			.forEach(score -> System.out.println(score));
+		System.out.println();
+		
+		studentList.stream()
+		.mapToInt(Student::getScore)
+		.forEach(System.out::println);
 	}
 }
