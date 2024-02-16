@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class AggregateExample {
 	public static void main(String[] args) {
 		//정수 배열
-		int[] arr = {1, 2, 3, 4, 5};
+		int[] arr = {1, 2, 3, 4, 5, 6};
 
 		//카운팅
 		long count = Arrays.stream(arr)

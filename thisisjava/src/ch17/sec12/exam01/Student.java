@@ -14,4 +14,11 @@ public class Student {
 	public String getName() { return name; }
 	public String getSex() { return sex; }
 	public int getScore() { return score; }
+
+	@Override
+	public String toString() {
+		return "Student [name=" + name + ", sex=" + sex + ", score=" + score + "]";
+	}
+	
+	
 }

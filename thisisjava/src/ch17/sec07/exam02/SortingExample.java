@@ -13,7 +13,7 @@ public class SortingExample {
 		
 		//점수를 기준으로 오름차순으로 정렬한 새 스트림 얻기
 		studentList.stream()
-			.sorted((s1, s2) -> Integer.compare(s1.getScore(), s2.getScore()))
+			.sorted((s1, s2) -> s1.getScore() - s2.getScore())
 			.forEach(s -> System.out.println(s.getName() + ": " + s.getScore()));	
 		System.out.println();
 		
