@@ -15,20 +15,44 @@ public class RunnableExecuteExample {
 		}
 		
 		//ExecutorService 생성
-		ExecutorService executorService = Executors.newFixedThreadPool(5);
+		int coreCount = Runtime.getRuntime().availableProcessors();
+		ExecutorService executorService = Executors.newFixedThreadPool(coreCount * 2);
+		
+		//1000초 시간 
+		for(int i=0; i<1000; i++) {
+			final int idx = i;
+			String from = mails[idx][0];
+			String to = mails[idx][1];
+			String content = mails[idx][2];
+			//mail 발송 하는 부분 --> network 시간, cpu 시간 사용안됨
+			//실행 시간 1초 
+			System.out.println("[메일 발송] " + from + " ==> " + to + ": " + content);
+		}
+
+		//앞에서 학습한 일반 스레드  
+		//1000초 시간 
+		for(int i=0; i<1000; i++) {
+			final int idx = i;
+			new Thread(() -> {
+				String from = mails[idx][0];
+				String to = mails[idx][1];
+				String content = mails[idx][2];
+				//mail 발송 하는 부분 --> network 시간, cpu 시간 사용안됨
+				//실행 시간 1초 
+				System.out.println("[메일 발송] " + from + " ==> " + to + ": " + content);
+			}).start();
+		}
+
 		
 		//이메일을 보내는 작업 생성 및 처리 요청
 		for(int i=0; i<1000; i++) {
 			final int idx = i;
-			executorService.execute(new Runnable() {
-				@Override
-				public void run() {
-					Thread thread = Thread.currentThread();
-					String from = mails[idx][0];
-					String to = mails[idx][1];
-					String content = mails[idx][2];
-					System.out.println("[" + thread.getName() + "] " + from + " ==> " + to + ": " + content);
-				}
+			executorService.execute(() -> {
+				Thread thread = Thread.currentThread();
+				String from = mails[idx][0];
+				String to = mails[idx][1];
+				String content = mails[idx][2];
+				System.out.println("[" + thread.getName() + "] " + from + " ==> " + to + ": " + content);
 			});
 		}
 			

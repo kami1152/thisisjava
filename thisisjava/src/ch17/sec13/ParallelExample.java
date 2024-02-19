@@ -10,7 +10,7 @@ public class ParallelExample {
 		Random random = new Random();
 
 		List<Integer> scores = new ArrayList< >();
-		for(int i=0; i<100000000; i++) {
+		for(long i=0; i<100000000; i++) {
 			scores.add(random.nextInt(101));
 		}
 

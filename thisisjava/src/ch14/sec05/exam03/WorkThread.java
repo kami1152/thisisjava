@@ -3,6 +3,7 @@ package ch14.sec05.exam03;
 public class WorkThread extends Thread {
 	//필드
 	public boolean work = true;
+	public boolean run = true;
 	
 	//생성자
 	public WorkThread(String name) {
@@ -12,10 +13,11 @@ public class WorkThread extends Thread {
 	//메소드
 	@Override
 	public void run() {
-		while(true) {
+		while(run) {
 			if(work) {
 				System.out.println(getName() + ": 작업처리");
 			} else {
+				System.out.println(getName() + ": 다른 스레드에게 양보함");
 				Thread.yield();
 			}
 		}

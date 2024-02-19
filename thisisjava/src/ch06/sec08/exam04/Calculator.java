@@ -8,6 +8,11 @@ public class Calculator {
 	
 	//직사각형의 넓이
 	double areaRectangle(double ... widths ) {
-//		return width * height;
+		double result = 1;
+		for (double width : widths) {
+			result *= width;
+		}
+		return result;
+//		return widths[0] * widths;
 	}
 }

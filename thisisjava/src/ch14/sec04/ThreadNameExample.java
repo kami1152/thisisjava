@@ -6,12 +6,9 @@ public class ThreadNameExample {
 		System.out.println(mainThread.getName() + " 실행");
 
 		for(int i=0; i<3; i++) {
-			Thread threadA = new Thread() {
-				@Override
-				public void run() {
-					System.out.println(getName() + " 실행");
-				}
-			};
+			Thread threadA = new Thread(() -> {
+				System.out.println(Thread.currentThread().getName() + " 실행");
+			});
 			threadA.start();
 		}
 
